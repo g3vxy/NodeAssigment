@@ -1,8 +1,15 @@
 import "dotenv/config";
 import express from "express";
 import { engine } from "express-handlebars";
+import postRouter from "./controller/posts.js";
 
 const app = express();
+
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
@@ -14,9 +21,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/posts", (req, res) => {
-  res.render("posts");
-});
+app.use(postRouter);
 
 app.listen(PORT, function () {
   console.log(`Listening on http://0.0.0.0:${PORT}`);
