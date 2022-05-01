@@ -1,6 +1,6 @@
 # Yet Another Shitty Blog
 
-I created this spaghetti of code for one of my classes.
+I created this spaghetti of code for one of my classes. Just a basic app with CRUD functionality.
 
 ## Installation
 
@@ -23,3 +23,8 @@ yarn start
 ```
 
 and pray.
+
+## Screenshots
+
+![List Page](screenshots/list.png)
+![Update Page](screenshots/update.png)
