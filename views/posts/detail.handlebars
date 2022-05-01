@@ -1,0 +1,12 @@
+<article class="container mx-auto flex flex-col my-4">
+  <h1 class="text-xl font-bold underline">{{this.data.title}}</h1>
+  <p class="whitespace-pre-line">{{this.data.body}}</p>
+  <a
+    class="absolute bottom-4 right-10 bg-lime-400 p-4 w-20 rounded text-white hover:bg-lime-500 transition-all"
+    href="/posts/update/{{this.data.id}}"
+  >update</a>
+  <a
+    class="absolute bottom-20 right-10 bg-lime-400 p-4 w-20 rounded text-white hover:bg-lime-500 transition-all"
+    href="/posts/delete/{{this.data.id}}"
+  >delete</a>
+</article>

@@ -1,5 +1,5 @@
 <form
-  action="/posts/create"
+  action="/posts/update/{{this.data.id}}"
   method="POST"
   class="flex flex-col container mx-auto gap-2 my-4"
 >
@@ -8,6 +8,7 @@
     placeholder="title"
     name="title"
     class="px-2 border-2 border-gray rounded hover:bg-gray-100 transition-all"
+    value="{{this.data.title}}"
   />
   <textarea
     type="textarea"
@@ -15,7 +16,7 @@
     name="body"
     rows="8"
     class="p-2 border-2 border-gray rounded hover:bg-gray-100 transition-all"
-  ></textarea>
+  >{{this.data.body}}</textarea>
   <button
     type="submit"
     class="border-2 border-gray text-gray-400 rounded w-1/3 mx-auto hover:bg-gray-100 transition-all"

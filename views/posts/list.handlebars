@@ -1,4 +1,16 @@
-<main>
-  <div></div>
-  <a href="/posts/create/">test</a>
+<main class="container mx-auto my-4 bg-gray-200">
+  <div class="w-full flex flex-col px-2">
+    {{#each data}}
+      <div class="flex flex-row justify-between items-center">
+        <span><a href="/posts/{{this._id}}">{{this.title}}</a></span>
+        <span
+          class="inline-flex justify-end truncate w-1/4"
+        >{{this.body}}</span>
+      </div>
+    {{/each}}
+  </div>
+  <a
+    class="absolute bottom-4 right-10 bg-lime-400 p-4 w-20 rounded text-white hover:bg-lime-500 transition-all"
+    href="/posts/create/"
+  >create</a>
 </main>
