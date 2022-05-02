@@ -24,6 +24,10 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
 app.use(postRouter);
 //
 app.listen(PORT, function () {
